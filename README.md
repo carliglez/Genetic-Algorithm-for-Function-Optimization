@@ -2,7 +2,19 @@
 
 ## Overview
 
-This program implements a Genetic Algorithm (GA) to optimize a variety of benchmark functions. The GA mimics the process of natural selection, evolving a population of potential solutions over multiple generations.
+This program implements a Genetic Algorithm (GA) in Python for the task of locating the global minimum of multidimensional functions. The GA mimics the process of natural selection, evolving a population of potential solutions over multiple generations.
+
+The program is organized into three folders:
+
+- ``singlerun/``: Contains different versions of the GA and executes each of the implemented functions once.
+- ``singlerun_time/``: Contains different versions of the GA and executes each of the implemented functions once, displaying the total execution time upon completion.
+- ``hundredruns/``: Contains different versions of the GA and executes each of the implemented functions a total of 100 times.
+
+The various versions of the GA are as follows:
+- **GEN:** Base version of the GA.
+- **GEN_S:** Implementing a new stopping rule.
+- **GEN_S_M:** Incorporating a new stopping rule and a novel mutation mechanism.
+- **GEN_S_M_LS:** Implementing a new stopping rule, a novel mutation mechanism, and the application of local search.
 
 ### Benchmark Functions
 
@@ -47,12 +59,12 @@ The following benchmark functions are included for optimization:
 
 The execution time for running the genetic algorithm on all benchmark functions was recorded on a standard laptop. After running each version of the code three times, the recorded execution times are as follows:
 
-- **GEN average execution time:** 54.21 seconds
-- **GEN_S average execution time:** 60.65 seconds
-- **GEN_S_M average execution time:** 72.62 seconds
-- **GEN_S_M_LS average execution time:** 49.61 seconds
+- **GEN average execution time:** ``54.21 seconds``
+- **GEN_S average execution time:** ``60.65 seconds``
+- **GEN_S_M average execution time:** ``72.62 seconds``
+- **GEN_S_M_LS average execution time:** ``49.61 seconds``
 
-## Key Observations:
+## Key Observations
 
 - **GEN_S_M_LS** consistently has the lowest execution times among all configurations.
 - **GEN** has the lowest execution time among its configurations, followed by **GEN_S** and **GEN_S_M**.
